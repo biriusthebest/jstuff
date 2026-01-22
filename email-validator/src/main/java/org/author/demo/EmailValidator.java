@@ -1,13 +1,9 @@
 package org.author.demo;
 
 public class EmailValidator {
+    private static final String EMAIL_ADDRESS_SIGN = "@";
 
     public boolean isValidEmail(String email) {
-        // Simple validation for demonstration purposes
-        if (email.contains("@")) {
-            return true;
-        } else {
-            return false;
-        }
+        return email.contains(EMAIL_ADDRESS_SIGN);
     }
 }
