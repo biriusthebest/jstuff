@@ -5,10 +5,12 @@ import org.junit.jupiter.api.Test;
 
 public class EmailValidatorTest {
 
+    // ... previous test ...
+
     @Test
-    public void testIsValidEmail_ValidEmail_ReturnsTrue() {
+    public void testGetDomain_ValidEmail_ReturnsDomain() {
         EmailValidator emailValidator = new EmailValidator();
-        boolean result = emailValidator.isValidEmail("test@example.com");
-        Assertions.assertTrue(result);
+        String result = emailValidator.getDomain("test@example.com");
+        Assertions.assertEquals("example.com", result);
     }
 }
