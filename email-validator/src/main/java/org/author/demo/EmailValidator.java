@@ -6,7 +6,9 @@ public class EmailValidator {
     public boolean isValidEmail(String email) {
         return email.contains(EMAIL_ADDRESS_SIGN);
     }
+
     public String getDomain(String email) {
-        return null;
+        String[] parts = email.split("@");
+        return parts[1];
     }
 }
